@@ -181,14 +181,6 @@ class Formula:
         assert Formula.is_formula(string)
         left , right = Formula._parse_prefix(string)
         return left
-        
-
-def main():
-    myformula = Formula('~',Formula('&',Formula('p'),Formula('q75')))
-    print(myformula.__repr__())
-    print(myformula.variables())
-    print(myformula.operators())
-    print(Formula._parse_prefix(input("Syntax: ")))
 
 @cache
 def is_variable(string: str) -> bool:
